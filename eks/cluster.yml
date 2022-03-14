@@ -1,0 +1,13 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig #Kind of object I want to create
+
+metadata: 
+  name: cicd-nodejs-app
+  region: us-east-2
+
+nodeGroups:
+  - name: g1
+  instanceType: t2.micro
+  desiredCapacity: 2 #Amount of nodes desired (EC2 instances)
+  ssh: 
+    allow: false
